@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selection</title>
+    <style>
+       body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    background-image: url('https://www.majorcineplex.com/uploads/content/images/2021/07/SF.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #000, #222);
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FF4500;
+}
+
+.movies-container {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.movie {
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.movie:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+.movie::after {
+    content: "\f144"; /* Icon Play */
+    font-family: FontAwesome;
+    font-size: 40px;
+    color: rgba(255, 215, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.movie:hover::after {
+    opacity: 1;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">รายการภาพยนต์</div>
+    </div>
+    <div class="movies-container">
+    <!-- แถวที่ 1 -->
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://s359.kapook.com/rq/450/auto/50/pagebuilder/a3cb65f0-d7d9-4a1e-9bc3-84251df3c319.jpg" alt="Movie 1">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://upload.wikimedia.org/wikipedia/th/d/d4/Poster-top-green-.jpg" alt="Movie 2">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://medias.thansettakij.com/uploads/images/contents/w1024/2023/11/1v7UwNEd03MTKMixygzM.webp?x-image-process=style/lg-webp" alt="Movie 3">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://kodungmovie.com/wp-content/uploads/2021/12/poster.jpg" alt="Movie 4">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/cf/d4/60/cfd46036c8625b5c15227e6bdfa2ebbd.jpg" alt="Movie 5">
+    </div>
+
+    <!-- แถวที่ 2 -->
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://ebertfest.com/sites/default/files/s-l1600.jpg" alt="Movie 6">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://media.readthecloud.co/wp-content/uploads/2024/10/09152552/tee-yod2-death-whisperer2-2.jpg" alt="Movie 7">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/dd/57/75/dd5775cb89c8407329a77464c70b804b.jpg" alt="Movie 8">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/24/05/f5/2405f5d1220d45fef53df0bfe804e104.jpg" alt="Movie 9">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/15/e1/af/15e1af8c3fabefb88137d2e22651d08d.jpg" alt="Movie 10">
+    </div>
+     <!-- แถวที่ 2 -->
+     <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/a9/7d/26/a97d26449214bb756c75b4ed88d7b06e.jpg" alt="Movie 6">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/d1/0e/a7/d10ea7a49ea2bc59842ca422f4caf749.jpg" alt="Movie 7">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/32/0a/b7/320ab7994967c304099d49b9ba405a70.jpg" alt="Movie 8">
+    </div>
+    <div class="movie" onclick="window.location.href='index.html';">
+        <img src="https://i.pinimg.com/736x/69/2c/ef/692cef006e6c6a2da2263a7b36d7db09.jpg" alt="Movie 9">
+    </div>
+    
+</div>
+</body>
+</html>

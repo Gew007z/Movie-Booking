@@ -1,0 +1,127 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #003366, #0099cc);
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    background: #002244;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .menu li {
+    list-style: none;
+    margin: 0 15px;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: all 0.3s;
+  }
+  
+  .menu li a:hover {
+    background: #0099cc;
+    border-radius: 5px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .movie-selection, .seat-selection, .summary, .payment {
+    background: #1a1a1a;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 153, 204, 0.5);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #0099cc;
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 10px;
+    background: #002244;
+    color: white;
+    border: 1px solid #005599;
+    border-radius: 4px;
+  }
+  
+  .seat-map {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  
+  .seat {
+    width: 50px;
+    height: 50px;
+    background: #444;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .seat:hover {
+    background: #0099cc;
+  }
+  
+  .seat.booked {
+    background: #cc0000;
+    cursor: not-allowed;
+    box-shadow: 0px 0px 10px rgba(204, 0, 0, 0.8);
+  }
+  
+  .seat.selected {
+    background: #00cc66;
+    box-shadow: 0px 0px 10px rgba(0, 204, 102, 0.8);
+  }
+  
+  button {
+    background: #0099cc;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  button:hover {
+    background: #0077aa;
+    transform: scale(1.05);
+  }

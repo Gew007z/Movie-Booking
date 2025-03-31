@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจองตั๋วหนัง</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Movie Booking/จองตั๋วภาพยนตร์</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="login.html">ล็อคอิน</a></li>
+                <li><a href="Select.html">รายการหนังหนัง</a></li>
+                <li><a href="index.html">จองตั๋ว</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-selection">
+            <h2>เลือกหนังที่ต้องการ</h2>
+            <select id="movie">
+                <option value="200">Avengers: Endgame - 200 บาท</option>
+                <option value="180">John Wick 4 - 180 บาท</option>
+                <option value="220">Avatar 2 - 220 บาท</option>
+            </select>
+        </section>
+        
+        <section class="seat-selection">
+            <h2>เลือกที่นั่ง</h2>
+            <div class="seat-map">
+                <div class="seat" data-seat="A1"></div>
+                <div class="seat" data-seat="A2"></div>
+                <div class="seat booked"></div>
+                <div class="seat" data-seat="A4"></div>
+                <div class="seat" data-seat="B1"></div>
+                <div class="seat" data-seat="B2"></div>
+                <div class="seat" data-seat="B3"></div>
+                <div class="seat" data-seat="B4"></div>
+            </div>
+        </section>
+        
+        <section class="summary">
+            <h2>สรุปรายการ</h2>
+            <p><strong>หนังที่เลือก:</strong> <span id="selected-movie">-</span></p>
+            <p><strong>ที่นั่งที่เลือก:</strong> <span id="selected-seats">-</span></p>
+            <p><strong>ราคารวม:</strong> <span id="total-price">0</span> บาท</p>
+            <button id="confirm-button">ยืนยันการจอง</button>
+        </section>
+        
+        <section class="payment">
+            <h2>ชำระเงิน</h2>
+            <select id="payment-method">
+                <option value="cash">💵 เงินสด</option>
+                <option value="credit-card">💳 บัตรเครดิต</option>
+                <option value="bank-transfer">🏦 โอนผ่านธนาคาร</option>
+            </select>
+            
+            <div id="credit-card-info" style="display: none;">
+                <h3>ข้อมูลบัตรเครดิต</h3>
+                <input type="text" id="card-number" placeholder="หมายเลขบัตร">
+                <input type="text" id="card-name" placeholder="ชื่อบนบัตร">
+                <input type="text" id="card-expiry" placeholder="วันหมดอายุ (MM/YY)">
+                <input type="text" id="card-cvv" placeholder="CVV">
+            </div>
+        
+            <button id="pay-button">ชำระเงิน</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

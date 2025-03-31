@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: red;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkred;
+        }
+        .toggle {
+            color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="form-title">Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="authenticate()">Submit</button>
+        <p class="toggle" onclick="toggleForm()">Don't have an account? Register</p>
+    </div>
+    
+    <script>
+        let isLogin = true;
+        let users = JSON.parse(localStorage.getItem("users")) || {};
+        
+        function toggleForm() {
+            isLogin = !isLogin;
+            document.getElementById("form-title").innerText = isLogin ? "Login" : "Register";
+            document.querySelector(".toggle").innerText = isLogin ? "Don't have an account? Register" : "Already have an account? Login";
+        }
+        
+        function authenticate() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (isLogin) {
+                if (users[username] && users[username] === password) {
+                    window.location.href = "Select.html"; // เปลี่ยนหน้าโดยไม่ต้อง alert
+                } else {
+                    alert("Invalid username or password");
+                }
+            } else {
+                if (users[username]) {
+                    alert("User already exists");
+                } else {
+                    users[username] = password;
+                    localStorage.setItem("users", JSON.stringify(users));
+                    alert("Registration Successful! You can now log in.");
+                    toggleForm();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
