@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // ✅ แจ้งเตือนว่าจองแล้ว
-        alert(`🎉 คุณได้ทำการจองสำเร็จแล้ว!\n\n🎬 หนัง: ${selectedMovie.textContent}\n🪑 ที่นั่ง: ${selectedSeats.textContent}\n💰 ราคารวม: ${totalPrice.textContent} บาท`);
+        alert(` คุณได้ทำการจองสำเร็จแล้ว!\n\n หนัง: ${selectedMovie.textContent}\n ที่นั่ง: ${selectedSeats.textContent}\n ราคารวม: ${totalPrice.textContent} บาท`);
     });
 
     paymentMethod.addEventListener("change", () => {
